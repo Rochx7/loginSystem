@@ -6,7 +6,7 @@ export const Api = axios.create({
 })
 
 Api.interceptors.request.use(
-  (config) => {
+  (config: any) => {
     const user = getUserLocalStorage()
 
     config.headers.Authorization = user?.token
